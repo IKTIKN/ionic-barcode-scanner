@@ -1,0 +1,7 @@
+{
+  "name": "ionic-barcode-scanner",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
