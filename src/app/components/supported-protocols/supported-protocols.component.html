@@ -1,0 +1,18 @@
+<ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col class="table-header protocol-column">Protocol</ion-col>
+            <ion-col class="table-header">Android</ion-col>
+            <ion-col class="table-header">IOS</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let protocol of supportedProtocols">
+            <ion-col class="protocol-column">{{ protocol.protocol }}</ion-col>
+            <ion-col>
+                <app-checkmark [isSupported]="protocol.android"></app-checkmark>
+            </ion-col>
+            <ion-col>
+                <app-checkmark [isSupported]="protocol.ios"></app-checkmark>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-card>

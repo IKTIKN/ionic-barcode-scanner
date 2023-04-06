@@ -1,0 +1,7 @@
+<ng-container *ngIf="isSupported; else cross">
+    <ion-icon name="checkmark-outline" color="success"></ion-icon>
+</ng-container>
+
+<ng-template #cross>
+    <ion-icon name="close-outline" color="danger"></ion-icon>
+</ng-template>
