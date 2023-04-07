@@ -29,3 +29,16 @@ body.scanner-active {
     --background: transparent;
     --ion-background-color: transparent;
 }
+
+.danger {
+    --color: var(--ion-color-danger)!important;
+    color: var(--ion-color-danger)!important;
+}
+
+.bold {
+    font-weight: bold!important;
+}
+
+.x-small {
+    font-size: x-small!important;
+}

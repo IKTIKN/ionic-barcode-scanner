@@ -64,13 +64,13 @@
             </ion-card-header>
 
             <ion-card-content>
-                <ion-list lines="inset">
-                    <ion-item *ngFor="let scan of barcode.scanResult">
+                <ion-list>
+                    <ion-item button (click)="copyToClipboard(scan.content)" *ngFor="let scan of barcode.scanResult">
                         <ion-label>
-                            {{ scan.protocol }}
-                            <p>{{ scan.timestamp | date:'H:mm, d MMM y' }}</p>
+                            <p class="bold x-small">{{ scan.protocol }}</p>
+                            {{ scan.content }}
+                            <p class="x-small">{{ scan.timestamp | date:'H:mm, d MMM y' }}</p>
                         </ion-label>
-                        {{ scan.content }}
                     </ion-item>
                 </ion-list>
             </ion-card-content>
@@ -96,6 +96,13 @@
         [duration]="5000"
         (didDismiss)="setToast(false)">
     </ion-toast>
+
+    <ion-action-sheet
+        [isOpen]="barcode.isActionSheetOpen"
+        [header]="barcode.actionSheetMessage"
+        [buttons]="actionSheetButtons"
+        (didDismiss)="setActionSheet(false)"
+    ></ion-action-sheet>
 
 </ion-content>
 
