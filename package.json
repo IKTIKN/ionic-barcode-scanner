@@ -22,6 +22,7 @@
     "@capacitor-community/barcode-scanner": "^3.0.3",
     "@capacitor/android": "4.7.3",
     "@capacitor/app": "4.1.1",
+    "@capacitor/clipboard": "^4.1.0",
     "@capacitor/core": "4.7.3",
     "@capacitor/haptics": "4.1.0",
     "@capacitor/keyboard": "4.1.1",
